@@ -5,3 +5,4 @@ module Stream = Stream
 module Mvar = Mvar
 module Svar = Svar
 module Throttle = Throttle
+module Mutex = Mutex
