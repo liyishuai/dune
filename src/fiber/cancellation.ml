@@ -39,7 +39,7 @@ let fire t =
 
 let rec fills_of_handlers acc = function
   | Handler { ivar; next; prev = _ } ->
-    fills_of_handlers (Fill (ivar, Cancelled ()) :: acc) next
+    fills_of_handlers (Scheduler.Fill (ivar, Cancelled ()) :: acc) next
   | End_of_handlers -> List.rev acc
 
 let fire' t =
